@@ -1,6 +1,6 @@
 function PizzaJoint() {
   this.base = "",
-  this.toppings = [],
+  this.toppings = []
 }
 
 PizzaJoint.prototype.getPrice =
@@ -8,24 +8,25 @@ function (){
   var basePrice = 10;
   var toppingPrice = 1;
   return basePrice + this.toppings.length*toppingPrice;
-}
+};
 
-fucntion PizzaOrder() {
-  this.pizzas = [],
-  this.total = 0
+function PizzaOrder() {
+  this.pizzas = []
 }
 
 PizzaOrder.prototype.addPizza =
 function (pizza) {
   this.pizzas.push(pizza);
-}
+};
 
-PizzaOrder.protoype.getTotal =
+PizzaOrder.prototype.getTotal =
 function (){
+  var total = 0;
   this.pizzas.forEach(function(pizza){
-    this.total += pizza.getPrice();
+    total += pizza.getPrice();
   });
-}
+  return total;
+};
 
 var createPizza = function(){
 
@@ -39,16 +40,20 @@ var createPizza = function(){
     pizza.toppings.push($(this).val())
   });
 
-  pizza.setPrice()
   return pizza
 }
 
+var pizzaOrder = new PizzaOrder();
 $(document).ready(function() {
+
+
   $("form#new-pizza").submit(function(event) {
     event.preventDefault();
 
     pizza = createPizza();
+    pizzaOrder.addPizza(pizza)
     console.log(pizza);
+    console.log(pizzaOrder, pizzaOrder.getTotal());
 
 
   })
