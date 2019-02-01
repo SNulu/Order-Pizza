@@ -1,11 +1,19 @@
 function PizzaJoint() {
   this.base = "",
-  this.toppings = []
+  this.toppings = [],
+  this.size=""
 }
 
-PizzaJoint.prototype.getPrice =
+PizzaJoint.prototype.cost =
 function (){
   var basePrice = 10;
+  if (this.size === "supper") {
+    basePrice = 20;
+  } else if (this.size === "large") {
+    basePrice = 16;
+  } else if (this.size === "medium") {
+    basePrice = 12;
+  }
   var toppingPrice = 1;
   return basePrice + this.toppings.length*toppingPrice;
 };
@@ -23,11 +31,14 @@ PizzaOrder.prototype.getTotal =
 function (){
   var total = 0;
   this.pizzas.forEach(function(pizza){
-    total += pizza.getPrice();
+    total += pizza.cost();
   });
   return total;
 };
 
+
+
+// Business Logic for Contacts ---------
 var createPizza = function(){
 
   pizza = new PizzaJoint()
@@ -39,6 +50,8 @@ var createPizza = function(){
     console.log(index+' checkbox has value ' +$(this).val());
     pizza.toppings.push($(this).val())
   });
+  var pizzaSize = $("#pizzaSize").val()
+  pizza.size = pizzaSize;
 
   return pizza
 }

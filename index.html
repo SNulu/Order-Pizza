@@ -17,27 +17,42 @@
         <div class="jumbotron jumbotron-fluid">
       <h1>Create Pizza</h1>
 
+      <hr />
       <form id="new-pizza">
-
-        <h1>Select Pizza Base</h1>
+        <div class="form-group">
+          <div class="form-group">
+          <h2>Pizza Size</h2>
+          <select class="form-control" id="pizzaSize">
+            <option value="small">small size pizza</option>
+            <option value="medium">medium size pizza</option>
+            <option value="large">large size pizza</option>
+            <option value="super">Super size pizza</option>
+          </select>
+          </div>
+          <hr />
+        <h2>Pizza Base</h2>
         <input type="radio" name="pizza-base" value="plain-base"> Plain Base<br>
         <input type="radio" name="pizza-base" value="cheese-base"> Cheese Base<br>
-
         <hr />
-        <h1>Select Toppings</h1>
+        </div>
+        <hr />
+        <div class="form-group">
+        <h2>Toppings</h2>
         <input type="checkbox" name="toppings" value="Squid"> Squid<br>
-        <input type="checkbox" name="toppings" value="Calamari"> Calamari & Chorizo<br>
+        <input type="checkbox" name="toppings" value="Squid"> Chorizo<br>
+        <input type="checkbox" name="toppings" value="Calamari"> Calamari<br>
         <input type="checkbox" name="toppings" value="Githeri"> Githeri<br>
         <input type="checkbox" name="toppings" value="Sukuma-wiki"> Sukuma Wiki<br>
         <input type="checkbox" name="toppings" value="Nyama-choma"> Nyama choma<br>
         <input type="checkbox" name="toppings" value="Cheese"> Cheese<br>
         <input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni<br>
         <input type="checkbox" name="toppings" value="Artichoke"> Artichoke<br>
-        <input type="checkbox" name="toppings" value="Meat-lover"> Mear lover<br>
+        <input type="checkbox" name="toppings" value="Meat-lover"> Meat lover<br>
         <input type="checkbox" name="toppings" value="Mukene"> Mukene<br>
         <input type="checkbox" name="toppings" value="Nsenene"> Nsenene<br>
         <!-- <input type="submit" value="Submit"> -->
-        <button type="submit" class="btn-primary">Add Pizza Topping</button>
+        </div>
+        <button type="submit" class="btn-primary">Add Pizza</button>
 
       </form>
       </div>
