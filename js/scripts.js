@@ -95,14 +95,16 @@ $(document).ready(function() {
 
   $("form#new-pizza").submit(function(event) {
     event.preventDefault();
-
     pizza = createPizza();
     pizzaOrder.addPizza(pizza)
     console.log(pizza);
     console.log(pizzaOrder, pizzaOrder.getTotal());
-
     displayOrder()
+  });
 
-
-  })
+  $("#place-order").click(function(event) {
+    console.log("place order");
+    $("#pizza-create").hide();
+    displayOrder()
+  });
 })
