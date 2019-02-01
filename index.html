@@ -10,8 +10,13 @@
   </head>
   <body>
     <div class="container">
-      <h1>Select Toppings</h1>
+      <h1>Create Pizza</h1>
       <form action="/action_page.php" method="get">
+        <h1>Select Pizza Base</h1>
+        <input type="radio" name="pizza-base" value="plain-base"> Plain Base<br>
+        <input type="radio" name="pizza-base" value="cheese-base"> Cheese Base<br>
+        <hr />
+        <h1>Select Toppings</h1>
         <input type="checkbox" name="toppings" value="Squid"> Squid<br>
         <input type="checkbox" name="toppings" value="Calamari"> Calamari & Chorizo<br>
         <input type="checkbox" name="toppings" value="Githeri"> Githeri<br>
