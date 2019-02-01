@@ -36,8 +36,6 @@ function (){
   return total;
 };
 
-
-
 // Business Logic for Contacts ---------
 var createPizza = function(){
 
@@ -92,7 +90,6 @@ var displayOrder = function(){
 var pizzaOrder = new PizzaOrder();
 $(document).ready(function() {
 
-
   $("form#new-pizza").submit(function(event) {
     event.preventDefault();
     pizza = createPizza();
@@ -106,5 +103,6 @@ $(document).ready(function() {
     console.log("place order");
     $("#pizza-create").hide();
     displayOrder()
+    $("#place-order").hide();
   });
 })

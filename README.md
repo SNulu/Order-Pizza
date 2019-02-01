@@ -6,7 +6,7 @@
 
 ## Description
 
-_This website is for a pizza company where a user can choose one or more individual toppings (cheese, pepperone, arrtichoke, anchovy, veggie, meatlover, etc) and the size to order a pizza, also will so the final cost of the order._
+_This website is for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, veggie, meat-lover, etc) and the size to order a pizza, also will so the final cost of the order._
 
 ## Setup/Installation Requirements
 
