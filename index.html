@@ -8,16 +8,12 @@
     <script src="js/scripts.js"></script>
     <title>Pizza Joint</title>
   </head>
-  <div class="jumbotron> jumbotron">
-    </div>
+
   <body>
-
-
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
       <h1>Create Pizza</h1>
-
-      <hr />
+        </div>
       <form id="new-pizza">
         <div class="form-group">
           <div class="form-group">
@@ -31,15 +27,14 @@
           </div>
           <hr />
         <h2>Pizza Base</h2>
-        <input type="radio" name="pizza-base" value="plain-base"> Plain Base<br>
-        <input type="radio" name="pizza-base" value="cheese-base"> Cheese Base<br>
-        <hr />
+        <input type="radio" name="pizza-base" value="plain base"> Plain Base<br>
+        <input type="radio" name="pizza-base" value="cheese base"> Cheese Base<br>
         </div>
         <hr />
         <div class="form-group">
         <h2>Toppings</h2>
         <input type="checkbox" name="toppings" value="Squid"> Squid<br>
-        <input type="checkbox" name="toppings" value="Squid"> Chorizo<br>
+        <input type="checkbox" name="toppings" value="Chorizo"> Chorizo<br>
         <input type="checkbox" name="toppings" value="Calamari"> Calamari<br>
         <input type="checkbox" name="toppings" value="Githeri"> Githeri<br>
         <input type="checkbox" name="toppings" value="Sukuma-wiki"> Sukuma Wiki<br>
@@ -52,9 +47,29 @@
         <input type="checkbox" name="toppings" value="Nsenene"> Nsenene<br>
         <!-- <input type="submit" value="Submit"> -->
         </div>
+
         <button type="submit" class="btn-primary">Add Pizza</button>
 
       </form>
+
+    <ul id="Pizza">
+    </ul>
+    <ul id="Prices">
+    </ul>
+    <div class="col-md-6">
+      <div id="show-pizzaDetials">
+        <span id="orderDetails">
+
+        </span>
+      <!-- <p>Squid <span class="Squid"></span></p>
+      <p>Cheese <span class="Cheese"></span></p>
+      <p>Artichoke <span class="phone-number"></span></p>
+      <p>Mukene<span class="Price"></span></p>
+      <p>Pepperoni<span class="email"></span></p>
+      <p>Nsenene<span class="work-email"></span></p>
+      <p>meat lover<span class="personal-email"></span></p>
+      <p class="Calamari">Calamari <span ></span></p> -->
       </div>
+    </div>
   </body>
 </html>

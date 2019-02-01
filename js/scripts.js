@@ -45,15 +45,48 @@ var createPizza = function(){
   var pizzaBase = $("input:radio[name=pizza-base]:checked").val();
   console.log(pizzaBase);
   pizza.base = pizzaBase
+  $("input:radio[name=pizza-base]:checked").prop('checked', false)
 
   var pizzaToppings = $("input:checkbox[name=toppings]:checked").each(function(index){
     console.log(index+' checkbox has value ' +$(this).val());
     pizza.toppings.push($(this).val())
+    $(this).prop('checked', false)
   });
+
   var pizzaSize = $("#pizzaSize").val()
+  $("#pizzaSize").prop('selectedIndex', 0)
   pizza.size = pizzaSize;
 
   return pizza
+}
+
+var displayPizza = function(pizza){
+  var htmlPizzaDetails = "";
+  htmlPizzaDetails += "<h4>Base: " + pizza.base + " Size: " + pizza.size+ "</h4>";
+
+  htmlPizzaDetails += "<ul>";
+  pizza.toppings.forEach(function(topping){
+    htmlPizzaDetails += "<li>" + topping + "</li>";
+  });
+  htmlPizzaDetails += "</ul>";
+
+  htmlPizzaDetails += "<h5>Price: $" + pizza.cost() + "</h5>";
+  return htmlPizzaDetails;
+}
+
+var displayOrder = function(){
+  var orderDetails = $("#orderDetails");
+  var htmlOrderDetails = ""
+
+  htmlOrderDetails += "<h2>Your Order Detials</h2>";
+
+  pizzaOrder.pizzas.forEach(function(pizza){
+    htmlOrderDetails += displayPizza(pizza);
+  });
+
+  htmlOrderDetails += "<h3>Total: "+pizzaOrder.getTotal()+"</h3>";
+
+  orderDetails.html(htmlOrderDetails)
 }
 
 var pizzaOrder = new PizzaOrder();
@@ -67,6 +100,8 @@ $(document).ready(function() {
     pizzaOrder.addPizza(pizza)
     console.log(pizza);
     console.log(pizzaOrder, pizzaOrder.getTotal());
+
+    displayOrder()
 
 
   })
