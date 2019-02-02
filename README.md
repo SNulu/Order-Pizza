@@ -12,7 +12,7 @@ _This website is for a pizza company where a user can choose one or more individ
 
 * _Clone from Repository._
 * _Open `index.html` to run in local browser._
-* _Go to [gh-page]() for live demo._
+* _Go to [gh-page](https://snulu.github.io/Order-Pizza/) for live demo._
 
 
 ## Known Bugs
