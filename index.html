@@ -11,14 +11,15 @@
 
   <body>
     <div class="container">
-      <div class="jumbotron jumbotron-fluid">
-        <h1>Create Pizza</h1>
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1 style="font-size:100px"><span style="color:Red">Pizza</span> <span style="color:Green">Pizza</span> Joint!</h1>
+        </div>
       </div>
       <div id="pizza-create">
         <form id="new-pizza">
           <div class="form-group">
-
-            <h2>Pizza Size</h2>
+            <h3>Pizza Size</h3>
               <select class="form-control" id="pizzaSize">
                 <option value="small">small size pizza</option>
                 <option value="medium">medium size pizza</option>
@@ -30,7 +31,7 @@
           <hr />
 
           <div class="form-group">
-            <h2>Pizza Base</h2>
+            <h3>Pizza Base</h3>
             <input type="radio" name="pizza-base" value="plain base"> Plain Base<br>
             <input type="radio" name="pizza-base" value="cheese base"> Cheese Base<br>
           </div>
@@ -38,7 +39,7 @@
           <hr />
 
           <div class="form-group">
-            <h2>Toppings</h2>
+            <h3>Toppings</h3>
             <input type="checkbox" name="toppings" value="Squid"> Squid<br>
             <input type="checkbox" name="toppings" value="Chorizo"> Chorizo<br>
             <input type="checkbox" name="toppings" value="Calamari"> Calamari<br>
@@ -53,12 +54,14 @@
             <input type="checkbox" name="toppings" value="Nsenene"> Nsenene<br>
             <!-- <input type="submit" value="Submit"> -->
           </div>
+
           <button type="submit" class="btn-primary">Add Pizza</button>
+
         </form>
       </div>
       <div id="show-pizzaDetials" class="col-md-6">
         <span id="orderDetails"></span>
-        <button id="place-order" class="btn-primary">Place Your Order</button>
+        <button id="place-order" class="btn-primary">Place Order</button>
       </div>
   </body>
 </html>

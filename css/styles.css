@@ -1,0 +1,22 @@
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/pizza.jpeg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-text {
+  color: yellow;
+   text-align: center;
+}
+
+
+.jumbotron{
+  margin-top: 100px;
+  padding: 100px;
+}
+
+body {
+    height: 100%;
+    background-color: #7ea7ce;
